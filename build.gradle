@@ -1,0 +1,21 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.2.2'
+}
+
+group = 'com.fw.springboot8583'
+sourceCompatibility = '21'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web:3.2.2'
+  implementation 'org.springframework.boot:spring-boot-starter-test:3.2.2'
+  implementation 'com.github.kpavlov.jreactive8583:netty-iso8583:1.3.0'
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}
