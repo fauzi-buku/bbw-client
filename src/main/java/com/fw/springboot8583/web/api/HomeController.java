@@ -25,7 +25,7 @@ public class HomeController {
   public ResponseEntity<?> sendAsyncEchoToBbw(@RequestParam(name = "stan", required = true) String stan) throws InterruptedException {
     IsoMessage isoMessage = bbwClient.sendAsyncEcho(stan);
     String temp = isoMessage.debugString();
-    String temp2 = stan.equals(temp.substring(46, 52)) ? "" : "NOOOOOOOOOOOOOOOO\n";
+    String temp2 = stan.equals(temp.substring(46, 52)) ? "" : "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO";
     return ResponseEntity.ok().body(stan + " -- " + isoMessage.getField(11) + " " + temp2 + "\n");
   }
 
